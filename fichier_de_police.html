@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Registration Form</title>
+    <link rel="stylesheet" href="fichier_de_police.css">
+</head>
+<body>
+    <img src="images.png" alt="Hotel Logo" class="logo">
+    <div class="container">
+        <form action="fichier_de_police.php" method="post">
+
+            
+            <fieldset>
+                <legend>Titulaire</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="nom" name="nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom:</label>
+                        <input type="text" id="prenom" name="prenom">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="profession">Profession:</label>
+                        <input type="text" id="profession" name="profession">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nationalite">Nationalité:</label>
+                        <input type="text" id="nationalite" name="nationalite">
+                    </div>
+                    <div class="form-group">
+                        <label for="document">Document:</label>
+                        <select id="document" name="document">
+                            <option value="CI">C.I.</option>
+                            <option value="passport">Passeport</option>
+                            <option value="titre_sejour">Permis de séjour</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numero">Numéro:</label>
+                        <input type="text" id="numero" name="numero">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-emission">Date d'émission:</label>
+                        <input type="date" id="date-emission" name="date_emission">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adresse">Adresse:</label>
+                        <input type="text" id="adresse" name="adresse">
+                    </div>
+                    <div class="form-group">
+                        <label for="ville">Ville:</label>
+                        <input type="text" id="ville" name="ville">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="code-postal">Code postal:</label>
+                        <input type="text" id="code-postal" name="code_postal">
+                    </div>
+                    <div class="form-group">
+                        <label for="pays">Pays:</label>
+                        <input type="text" id="pays" name="pays">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone:</label>
+                        <input type="text" id="telephone" name="telephone">
+                    </div>
+                </div>
+
+                <label>Centre d'intérêt:</label>
+                <div class="centre-interet-container">
+                    <div>
+                        <input type="checkbox" id="tourisme" name="centre_interet[]" value="Tourisme">
+                        <label for="tourisme">Tourisme</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tennis" name="centre_interet[]" value="Tennis">
+                        <label for="tennis">Tennis</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="trekking" name="centre_interet[]" value="Trekking">
+                        <label for="trekking">Trekking</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="golf" name="centre_interet[]" value="Golf">
+                        <label for="golf">Golf</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="golf-hcp" name="centre_interet[]" value="Golf HCP">
+                        <label for="golf-hcp">Golf HCP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="spa-thalasso" name="centre_interet[]" value="Spa/Thalasso">
+                        <label for="spa-thalasso">Spa/Thalasso</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sports" name="centre_interet[]" value="Sports">
+                        <label for="sports">Sports</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="business" name="centre_interet[]" value="Business">
+                        <label for="business">Business</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tourisme" name="centre_interet[]" value="Tourisme" hidden>
+                        
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Accompagnateurs 1</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom-accomp1">Nom:</label>
+                        <input type="text" id="nom-accomp1" name="nom_accomp1">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom-accomp1">Prénom:</label>
+                        <input type="text" id="prenom-accomp1" name="prenom_accomp1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nationalite-accomp1">Nationalité:</label>
+                        <input type="text" id="nationalite-accomp1" name="nationalite_accomp1">
+                    </div>
+                    <div class="form-group">
+                        <label for="document-accomp1">Document:</label>
+                        <select id="document-accomp1" name="document_accomp1">
+                            <option value="CI">C.I.</option>
+                            <option value="passport">Passeport</option>
+                            <option value="titre_sejour">Permis de séjour</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numero-accomp1">Numéro:</label>
+                        <input type="text" id="numero-accomp1" name="numero_accomp1">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-naissance-accomp1">Date de naissance:</label>
+                        <input type="date" id="date-naissance-accomp1" name="date_naissance_accomp1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email-accomp1">E-mail:</label>
+                        <input type="email" id="email-accomp1" name="email_accomp1">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Accompagnateurs 2</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom-accomp2">Nom:</label>
+                        <input type="text" id="nom-accomp2" name="nom_accomp2">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom-accomp2">Prénom:</label>
+                        <input type="text" id="prenom-accomp2" name="prenom_accomp2">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nationalite-accomp2">Nationalité:</label>
+                        <input type="text" id="nationalite-accomp2" name="nationalite_accomp2">
+                    </div>
+                    <div class="form-group">
+                        <label for="document-accomp2">Document:</label>
+                        <select id="document-accomp2" name="document_accomp2">
+                            <option value="CI">C.I.</option>
+                            <option value="passport">Passeport</option>
+                            <option value="titre_sejour">Permis de séjour</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numero-accomp2">Numéro:</label>
+                        <input type="text" id="numero-accomp2" name="numero_accomp2">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-naissance-accomp2">Date de naissance:</label>
+                        <input type="date" id="date-naissance-accomp2" name="date_naissance_accomp2">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email-accomp2">E-mail:</label>
+                        <input type="email" id="email-accomp2" name="email_accomp2">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Accompagnateurs 3</legend>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom-accomp3">Nom:</label>
+                        <input type="text" id="nom-accomp3" name="nom_accomp3">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom-accomp3">Prénom:</label>
+                        <input type="text" id="prenom-accomp3" name="prenom_accomp3">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nationalite-accomp3">Nationalité:</label>
+                        <input type="text" id="nationalite-accomp3" name="nationalite_accomp3">
+                    </div>
+                    <div class="form-group">
+                        <label for="document-accomp3">Document:</label>
+                        <select id="document-accomp3" name="document_accomp3">
+                            <option value="CI">C.I.</option>
+                            <option value="passport">Passeport</option>
+                            <option value="titre_sejour">Permis de séjour</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numero-accomp3">Numéro:</label>
+                        <input type="text" id="numero-accomp3" name="numero_accomp3">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-naissance-accomp3">Date de naissance:</label>
+                        <input type="date" id="date-naissance-accomp3" name="date_naissance_accomp3">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email-accomp3">E-mail:</label>
+                        <input type="email" id="email-accomp3" name="email_accomp3">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="signature-container">
+                <div class="signature-wrapper left">
+                    <label for="signature-titulaire">Signature titulaire:</label>
+                    <div class="signature" id="signature-titulaire"></div>
+                </div>
+                <div class="signature-wrapper middle">
+                    <label for="signature-accomp1">Signature 1er accompagnateur:</label>
+                    <div class="signature" id="signature-accomp1"></div>
+                </div>
+            </div>
+
+            <div class="signature-container">
+                <div class="signature-wrapper left">
+                    <label for="signature-accomp2">Signature 2ème accompagnateur:</label>
+                    <div class="signature" id="signature-accomp2"></div>
+                </div>
+                <div class="signature-wrapper middle">
+                    <label for="signature-accomp3">Signature 3ème accompagnateur:</label>
+                    <div class="signature" id="signature-accomp3"></div>
+                </div>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

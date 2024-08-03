@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Hotel-4917-20230907-024253.jpg'); 
+    background-size:auto;
+    background-position:inherit; 
+    background-repeat:round;       
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.logo {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+}
+
+form {
+    margin: 3px 0;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between form groups */
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signature-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.signature-wrapper {
+    flex: 1;
+    margin-right: 10px;
+    min-width: calc(50% - 10px);
+}
+
+.signature-wrapper.middle {
+    margin-right: 0;
+}
+
+.signature {
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .signature-wrapper {
+        margin-right: 0;
+        margin-bottom: 10px;
+        min-width: 100%;
+    }
+
+    .signature-container {
+        flex-direction: column;
+    }
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkboxes */
+}
+
+.centre-interet-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between rows and columns */
+}
+
+.centre-interet-container div {
+    flex: 1 1 calc(33.333% - 20px); /* Three checkboxes per row */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.centre-interet-container div label {
+    margin-right: 10px; /* Space between checkbox and label */
+}
