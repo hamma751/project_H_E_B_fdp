@@ -193,19 +193,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     </body>
     </html>
 ";
-$config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
-    // Create a new Guzzle HTTP client
-    $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
-        new GuzzleHttp\Client(),
-    $config
-);
-    $client = new Client();
+$client = new Client();
 
     try {
-        $response = $client->request('GET', 'https://api.brevo.com/v3/smtp/email', [
+        $response = $client->request('POST', 'https://api.brevo.com/v3/smtp/email', [
             'headers' => [
                 'accept' => 'application/json',
-                'api-key' => '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', // Replace with your Brevo API key
+                'api-key' => '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',
                 'content-type' => 'application/json',
             ],
             'json' => [
@@ -224,13 +218,13 @@ $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey(
             ],
         ]);
 
-        if ($response->GETStatusCode() == 201) {
+        if ($response->getStatusCode() == 201) {
             echo 'Message has been sent';
         } else {
             echo 'Failed to send message';
         }
     } catch (Exception $e) {
-        echo 'Message could not be sent. Error: ', $e->GETMessage();
+        echo 'Message could not be sent. Error: ', $e->getMessage();
     }
 } else {
     echo 'Invalid request method';
