@@ -3,46 +3,46 @@ use GuzzleHttp\Client;
 
 require 'vendor/autoload.php';  
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Collect form data
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $profession = $_POST['profession'];
-    $email = $_POST['email'];
-    $nationalite = $_POST['nationalite'];
-    $document = $_POST['document'];
-    $numero = $_POST['numero'];
-    $date_emission = $_POST['date_emission'];
-    $adresse = $_POST['adresse'];
-    $ville = $_POST['ville'];
-    $code_postal = $_POST['code_postal'];
-    $pays = $_POST['pays'];
-    $telephone = $_POST['telephone'];
-    $centre_interet = isset($_POST['centre_interet']) ? implode(', ', $_POST['centre_interet']) : 'None';
+    $nom = $_GET['nom'];
+    $prenom = $_GET['prenom'];
+    $profession = $_GET['profession'];
+    $email = $_GET['email'];
+    $nationalite = $_GET['nationalite'];
+    $document = $_GET['document'];
+    $numero = $_GET['numero'];
+    $date_emission = $_GET['date_emission'];
+    $adresse = $_GET['adresse'];
+    $ville = $_GET['ville'];
+    $code_GETal = $_GET['code_GETal'];
+    $pays = $_GET['pays'];
+    $telephone = $_GET['telephone'];
+    $centre_interet = isset($_GET['centre_interet']) ? implode(', ', $_GET['centre_interet']) : 'None';
 
-    $nom_accomp1 = $_POST['nom_accomp1'];
-    $prenom_accomp1 = $_POST['prenom_accomp1'];
-    $nationalite_accomp1 = $_POST['nationalite_accomp1'];
-    $document_accomp1 = $_POST['document_accomp1'];
-    $numero_accomp1 = $_POST['numero_accomp1'];
-    $date_naissance_accomp1 = $_POST['date_naissance_accomp1'];
-    $email_accomp1 = $_POST['email_accomp1'];
+    $nom_accomp1 = $_GET['nom_accomp1'];
+    $prenom_accomp1 = $_GET['prenom_accomp1'];
+    $nationalite_accomp1 = $_GET['nationalite_accomp1'];
+    $document_accomp1 = $_GET['document_accomp1'];
+    $numero_accomp1 = $_GET['numero_accomp1'];
+    $date_naissance_accomp1 = $_GET['date_naissance_accomp1'];
+    $email_accomp1 = $_GET['email_accomp1'];
 
-    $nom_accomp2 = $_POST['nom_accomp2'];
-    $prenom_accomp2 = $_POST['prenom_accomp2'];
-    $nationalite_accomp2 = $_POST['nationalite_accomp2'];
-    $document_accomp2 = $_POST['document_accomp2'];
-    $numero_accomp2 = $_POST['numero_accomp2'];
-    $date_naissance_accomp2 = $_POST['date_naissance_accomp2'];
-    $email_accomp2 = $_POST['email_accomp2'];
+    $nom_accomp2 = $_GET['nom_accomp2'];
+    $prenom_accomp2 = $_GET['prenom_accomp2'];
+    $nationalite_accomp2 = $_GET['nationalite_accomp2'];
+    $document_accomp2 = $_GET['document_accomp2'];
+    $numero_accomp2 = $_GET['numero_accomp2'];
+    $date_naissance_accomp2 = $_GET['date_naissance_accomp2'];
+    $email_accomp2 = $_GET['email_accomp2'];
 
-    $nom_accomp3 = $_POST['nom_accomp3'];
-    $prenom_accomp3 = $_POST['prenom_accomp3'];
-    $nationalite_accomp3 = $_POST['nationalite_accomp3'];
-    $document_accomp3 = $_POST['document_accomp3'];
-    $numero_accomp3 = $_POST['numero_accomp3'];
-    $date_naissance_accomp3 = $_POST['date_naissance_accomp3'];
-    $email_accomp3 = $_POST['email_accomp3'];
+    $nom_accomp3 = $_GET['nom_accomp3'];
+    $prenom_accomp3 = $_GET['prenom_accomp3'];
+    $nationalite_accomp3 = $_GET['nationalite_accomp3'];
+    $document_accomp3 = $_GET['document_accomp3'];
+    $numero_accomp3 = $_GET['numero_accomp3'];
+    $date_naissance_accomp3 = $_GET['date_naissance_accomp3'];
+    $email_accomp3 = $_GET['email_accomp3'];
 
     // Prepare the email content
     $subject = 'New Hotel Registration Form Submission';
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class='info-item'><strong>Ville:</strong> $ville</div>
                 </div>
                 <div class='info-pair'>
-                    <div class='info-item'><strong>Code postal:</strong> $code_postal</div>
+                    <div class='info-item'><strong>Code GETal:</strong> $code_GETal</div>
                     <div class='info-item'><strong>Pays:</strong> $pays</div>
                 </div>
                 <div class='info-pair'>
@@ -197,7 +197,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $client = new Client();
 
     try {
-        $response = $client->request('POST', 'https://api.brevo.com/v3/smtp/email', [
+        $response = $client->request('GET', 'https://api.brevo.com/v3/smtp/email', [
             'headers' => [
                 'accept' => 'application/json',
                 'api-key' => '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', // Replace with your Brevo API key
