@@ -193,47 +193,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </body>
     </html>
 ";
-    <?php
-// Define your API key
-define('API_KEY', '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');
-
-// Get the request headers
-$headers = apache_request_headers();
-
-// Check if the 'Authorization' header is present
-if (isset($headers['Authorization'])) {
-    // Extract the API key from the 'Authorization' header
-    $apiKey = str_replace('Bearer ', '', $headers['Authorization']);
-
-    // Validate the API key
-    if ($apiKey === API_KEY) {
-        // API key is valid, process the request
-
-        // Get the POST data
-        $input = json_decode(file_get_contents('php://input'), true);
-
-        // Handle the request data
-        $response = [
-            'message' => 'Success',
-            'data' => $input
-        ];
-
-        // Send a JSON response
-        header('Content-Type: application/json');
-        echo json_encode($response);
-    } else {
-        // Invalid API key
-        header('HTTP/1.1 401 Unauthorized');
-        echo json_encode(['message' => 'Unauthorized']);
-    }
-} else {
-    // No 'Authorization' header present
-    header('HTTP/1.1 400 Bad Request');
-    echo json_encode(['message' => 'Bad Request: Missing Authorization Header']);
-}
-?>
-
+$config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', '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');
     // Create a new Guzzle HTTP client
+    $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
+        new GuzzleHttp\Client(),
+    $config
+);
     $client = new Client();
 
     try {
