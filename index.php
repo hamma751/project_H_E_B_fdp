@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $date_naissance_accomp1 = $_GET['date_naissance_accomp1'];
     $email_accomp1 = $_GET['email_accomp1'];
 
-    $nom_accomp2 = $_GET['nom_accomp2'];
-    $prenom_accomp2 = $_GET['prenom_accomp2'];
+    $nom_accomp2 = $_['nom_accomp2'];
+    $prenom_accomp2 = $_['prenom_accomp2'];
     $nationalite_accomp2 = $_GET['nationalite_accomp2'];
     $document_accomp2 = $_GET['document_accomp2'];
     $numero_accomp2 = $_GET['numero_accomp2'];
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <div class='info-item'><strong>Ville:</strong> $ville</div>
                 </div>
                 <div class='info-pair'>
-                    <div class='info-item'><strong>Code GETal:</strong> $code_GETal</div>
+                    <div class='info-item'><strong>Code postal:</strong> $code_postal</div>
                     <div class='info-item'><strong>Pays:</strong> $pays</div>
                 </div>
                 <div class='info-pair'>
