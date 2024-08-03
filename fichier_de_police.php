@@ -200,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $response = $client->request('POST', 'https://api.brevo.com/v3/smtp/email', [
             'headers' => [
                 'accept' => 'application/json',
-                'api-key' => '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', // Replace with your Brevo API key
+                'api-key' => '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', // Replace with your Brevo API key
                 'content-type' => 'application/json',
             ],
             'json' => [
