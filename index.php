@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 use GuzzleHttp\Client;
 
 require 'vendor/autoload.php';  
