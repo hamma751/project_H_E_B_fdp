@@ -200,7 +200,7 @@ $client = new Client();
         $response = $client->request('POST', 'https://api.brevo.com/v3/smtp/email', [
             'headers' => [
                 'accept' => 'application/json',
-                'api-key' => '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',
+                'api-key' => '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',
                 'content-type' => 'application/json',
             ],
             'json' => [
